@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	int n,N,j= 0,i=0,len1,len2,lent,soma;
+	
+	char nome1[51],nome2[51],resultado[102];
+	scanf("%d",&N);
+	
+	while (n < N){
+		
+		scanf("%s %s",nome1,nome2);
+		
+		len1 = strlen(nome1);
+		len2 = strlen(nome2);
+		
+		for (i=0,soma=0;i<len1 && i<len2;i++,soma+=2){
+			resultado[soma] = nome1[i];
+			resultado[soma+1] = nome2[i];			
+		}
+		
+		for (i,soma;i < len1;i++,soma+=1){
+			resultado[soma] = nome1[i];
+		}
+		
+		
+		for (i,soma;i < len2;i++,soma+=1){
+			resultado[soma] = nome2[i];
+		}
+			
+		resultado [soma] = '\0';
+		n++;
+		puts(resultado);		
+	}
+		
+}
