@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+int main (){
+	
+	int i,contador,q,k;	
+	char str1[10001];
+	
+	scanf("%d\n",&q,str1);
+	gets(str1);
+	
+	
+	for (i; i<10001  && str1[i]!= '\0';i++){
+		printf("%c",str1[i]);
+
+		if ( str1[i] == 'B' && str1[i-1] == 'O' && str1[i-2] == ' ' && (str1[i+2] == ' ' || str1[i+2] == '\0') ){		
+			str1[i+1] = 'I';
+		}
+		else if (str1[i] == 'R' && str1[i-1] == 'U' && str1[i-2] == ' ' && (str1[i+2] == ' ' || str1[i+2] == '\0') ){
+			str1[i+1] = 'I';
+		}
+		
+		else if ( i == 1 && str1[i] == 'R' && str1[i-1] == 'U' && str1[i+2] == ' ' ){
+			str1[i+1] = 'I';
+		}
+		
+		else if ( i == 1 && str1[i] == 'B' && str1[i-1] == 'O' && str1[i+2] == ' ' ){
+			str1[i+1] = 'I';
+		}
+		
+	}
+	printf("\n");
+}
