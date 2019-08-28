@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+int contador,i,q,ladoA,ladoB,check,resultado;
+scanf("%d",&contador);
+
+int matriz[contador][contador],matriz2[1001]={0};
+
+for (i=0;i<contador;i++){
+  for (q=0;q<contador;q++){
+    scanf("%d",&matriz[i][q]);
+  }
+}
+for (i=0;i<contador*2;i++){
+  scanf("%d %d",&ladoA,&ladoB);
+  check = matriz[ladoA-1][ladoB-1];
+  matriz2[check]++;
+}
+
+resultado = 0;
+for (i=0;i<1001;i++){
+  if (matriz2[i] != 0){
+    resultado++;
+  }
+}
+printf("%d\n",resultado);
+}
