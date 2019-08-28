@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+int numeros[2001]={0},contador,i,q;
+scanf ("%d",&contador);
+for(i=0;i<contador;i++){
+  scanf("%d",&q);
+  numeros[q]++;
+}
+for(i=0;i<2001;i++){  
+  if (numeros[i] != 0){
+    printf("%d aparece %d vez(es)\n",i,numeros[i]);
+  }
+}
+}
